@@ -1,16 +1,59 @@
-/* 🔹 Căn chỉnh toàn bộ trang */
+/* 🔹 Áp dụng ảnh nền toàn bộ trang */
 body {
+    background-image: url('anhnen.jpg'); /* Đảm bảo file ảnh nằm trong thư mục css */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
 }
 
+/* 🔹 Container của toàn bộ nội dung */
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Nền trắng mờ để dễ đọc */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Căn chỉnh form nhập */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+/* 🔹 Ô nhập liệu */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%;
+}
+
+/* 🔹 Điều chỉnh kích thước ô nhập */
+.input-group input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 /* 🔹 Khung quét QR */
 #qr-reader {
     width: 100% !important;
-    max-width: 100px; /* Điều chỉnh kích thước quét QR */
+    max-width: 350px; /* Chỉnh kích thước khung quét */
     margin: auto;
 }
+
+/* 🔹 Kết quả quét QR */
 #qr-reader-results {
     text-align: center;
     margin-top: 10px;
@@ -18,59 +61,42 @@ body {
     color: green;
 }
 
-/* 🔹 Căn chỉnh form nhập liệu */
-.form-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Căn giữa */
-    gap: 10px;
-    max-width: 600px; /* Giữ form không quá rộng */
-    margin: 10px auto;
-    align-items: center;
-}
-
-/* 🔹 Nhóm ô nhập */
-.input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 45%; /* Giữ độ rộng ổn định */
-}
-.input-group label {
-    font-weight: bold;
-}
-.input-group input {
-    width: 50%;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-/* 🔹 Bảng dữ liệu quét */
+/* 🔹 Bảng danh sách đã quét */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background: white;
 }
+
+/* 🔹 Định dạng bảng */
 table, th, td {
     border: 1px solid black;
-}
-th, td {
     padding: 10px;
     text-align: center;
 }
 
-/* 🔹 Nếu màn hình nhỏ (điện thoại), form sẽ tự động căn chỉnh */
+/* 🔹 Nút bấm */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* 🔹 Nếu màn hình nhỏ, chuyển về dạng dọc */
 @media (max-width: 600px) {
     .form-container {
         flex-direction: column;
         width: 100%;
-        align-items: center;
     }
     .input-group {
-        width: 90%;
+        width: 100%;
     }
     #qr-reader {
-        max-width: 90%;
+        max-width: 250px; /* Giảm kích thước khung quét QR */
     }
 }
