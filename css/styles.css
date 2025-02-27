@@ -8,7 +8,7 @@ body {
 /* 🔹 Khung quét QR */
 #qr-reader {
     width: 100% !important;
-    max-width: 200px; /* Điều chỉnh kích thước quét QR */
+    max-width: 100px; /* Điều chỉnh kích thước quét QR */
     margin: auto;
 }
 #qr-reader-results {
