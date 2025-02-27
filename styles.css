@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+#qr-reader {
+    width: 100% !important;
+    max-width: 400px;
+    margin: auto;
+}
+#qr-reader-results {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: green;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+input {
+    padding: 5px;
+    margin: 5px;
+}
