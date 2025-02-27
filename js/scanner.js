@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var html5QrcodeScanner = new Html5QrcodeScanner("qr-reader", {
         fps: 10,
-        qrbox: 250,
+        qrbox: 100,
         rememberLastUsedCamera: true,
         aspectRatio: 1.0,
         supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]
