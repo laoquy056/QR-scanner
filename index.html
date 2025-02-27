@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quét QR Code Bằng Camera</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/html5-qrcode.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
-
     <h1>Quét QR Code Bằng Camera</h1>
     <div id="qr-reader"></div>
     
     <div id="scan-result">
         <p><strong>Mã QR đã quét:</strong> <span id="qr-data">Chưa có</span></p>
-        <label>Ghi chú: <input type="text" id="note"></label>
-        <label>Số lượng: <input type="number" id="quantity" min="1" value="1"></label>
+        <div class="input-container">
+            <label>Ghi chú: <input type="text" id="note"></label>
+            <label>Số lượng: <input type="number" id="quantity" min="1" value="1"></label>
+        </div>
         <label>Hình ảnh: <input type="file" id="imageUpload" accept="image/*"></label>
         <button onclick="saveData()">Lưu</button>
         <button onclick="clearData()">Xóa Danh Sách</button>
@@ -41,6 +41,6 @@
     <script src="js/scanner.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/export.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx-populate/1.21.0/xlsx-populate.min.js"></script>
 </body>
 </html>
