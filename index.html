@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quét QR Code Bằng Camera</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/html5-qrcode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <h1>Quét QR Code Bằng Camera</h1>
+    <div id="qr-reader"></div>
+    
+    <div id="scan-result">
+        <p><strong>Mã QR đã quét:</strong> <span id="qr-data">Chưa có</span></p>
+        <label>Ghi chú: <input type="text" id="note"></label>
+        <label>Số lượng: <input type="number" id="quantity" min="1" value="1"></label>
+        <label>Hình ảnh: <input type="file" id="imageUpload" accept="image/*"></label>
+        <button onclick="saveData()">Lưu</button>
+        <button onclick="clearData()">Xóa Danh Sách</button>
+        <button onclick="exportToCSV()">Xuất CSV</button>
+        <button onclick="exportToExcel()">Xuất Excel</button>
+    </div>
+
+    <h2>Danh Sách Đã Quét</h2>
+    <table id="qr-table">
+        <thead>
+            <tr>
+                <th>Mã QR</th>
+                <th>Ghi chú</th>
+                <th>Số lượng</th>
+                <th>Ngày Giờ Quét</th>
+                <th>Hình ảnh</th>
+            </tr>
+        </thead>
+        <tbody id="qr-table-body"></tbody>
+    </table>
+
+    <script src="js/scanner.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/export.js"></script>
+
+</body>
+</html>
