@@ -1,32 +1,34 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
+/* 🔹 Căn chỉnh form */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 500px;
+    margin: 10px auto;
 }
-#qr-reader {
-    width: 100% !important;
-    max-width: 200px;
-    margin: auto;
+
+/* 🔹 Tạo nhóm ô nhập */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
 }
-#qr-reader-results {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 18px;
-    color: green;
-}
-table {
+
+/* 🔹 Chỉnh chiều rộng input */
+.input-group input {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-table, th, td {
-    border: 1px solid black;
-}
-th, td {
-    padding: 10px;
-    text-align: center;
-}
-input {
     padding: 5px;
-    margin: 5px;
+}
+
+/* 🔹 Nếu màn hình nhỏ, chuyển về hiển thị theo chiều dọc */
+@media (max-width: 600px) {
+    .form-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .input-group {
+        width: 100%;
+    }
 }
